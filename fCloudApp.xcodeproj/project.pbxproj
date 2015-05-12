@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00958EF71B01A2F8007C59C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00958EF61B01A2F8007C59C0 /* AppDelegate.swift */; };
+		00958EFA1B01A2F8007C59C0 /* fCloudApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00958EF81B01A2F8007C59C0 /* fCloudApp.xcdatamodeld */; };
+		00958EFC1B01A2F8007C59C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00958EFB1B01A2F8007C59C0 /* Images.xcassets */; };
+		00958EFF1B01A2F8007C59C0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00958EFD1B01A2F8007C59C0 /* MainMenu.xib */; };
+		00958F0B1B01A2F8007C59C0 /* fCloudAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00958F0A1B01A2F8007C59C0 /* fCloudAppTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00958F051B01A2F8007C59C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00958EE91B01A2F8007C59C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00958EF01B01A2F8007C59C0;
+			remoteInfo = fCloudApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00958EF11B01A2F8007C59C0 /* fCloudApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fCloudApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00958EF51B01A2F8007C59C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00958EF61B01A2F8007C59C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00958EF91B01A2F8007C59C0 /* fCloudApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fCloudApp.xcdatamodel; sourceTree = "<group>"; };
+		00958EFB1B01A2F8007C59C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		00958EFE1B01A2F8007C59C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		00958F041B01A2F8007C59C0 /* fCloudAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fCloudAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00958F091B01A2F8007C59C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00958F0A1B01A2F8007C59C0 /* fCloudAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fCloudAppTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00958EEE1B01A2F8007C59C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00958F011B01A2F8007C59C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00958EE81B01A2F8007C59C0 = {
+			isa = PBXGroup;
+			children = (
+				00958EF31B01A2F8007C59C0 /* fCloudApp */,
+				00958F071B01A2F8007C59C0 /* fCloudAppTests */,
+				00958EF21B01A2F8007C59C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00958EF21B01A2F8007C59C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00958EF11B01A2F8007C59C0 /* fCloudApp.app */,
+				00958F041B01A2F8007C59C0 /* fCloudAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00958EF31B01A2F8007C59C0 /* fCloudApp */ = {
+			isa = PBXGroup;
+			children = (
+				00958EF61B01A2F8007C59C0 /* AppDelegate.swift */,
+				00958EFB1B01A2F8007C59C0 /* Images.xcassets */,
+				00958EFD1B01A2F8007C59C0 /* MainMenu.xib */,
+				00958EF81B01A2F8007C59C0 /* fCloudApp.xcdatamodeld */,
+				00958EF41B01A2F8007C59C0 /* Supporting Files */,
+			);
+			path = fCloudApp;
+			sourceTree = "<group>";
+		};
+		00958EF41B01A2F8007C59C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00958EF51B01A2F8007C59C0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00958F071B01A2F8007C59C0 /* fCloudAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				00958F0A1B01A2F8007C59C0 /* fCloudAppTests.swift */,
+				00958F081B01A2F8007C59C0 /* Supporting Files */,
+			);
+			path = fCloudAppTests;
+			sourceTree = "<group>";
+		};
+		00958F081B01A2F8007C59C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00958F091B01A2F8007C59C0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00958EF01B01A2F8007C59C0 /* fCloudApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00958F0E1B01A2F8007C59C0 /* Build configuration list for PBXNativeTarget "fCloudApp" */;
+			buildPhases = (
+				00958EED1B01A2F8007C59C0 /* Sources */,
+				00958EEE1B01A2F8007C59C0 /* Frameworks */,
+				00958EEF1B01A2F8007C59C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fCloudApp;
+			productName = fCloudApp;
+			productReference = 00958EF11B01A2F8007C59C0 /* fCloudApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		00958F031B01A2F8007C59C0 /* fCloudAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00958F111B01A2F8007C59C0 /* Build configuration list for PBXNativeTarget "fCloudAppTests" */;
+			buildPhases = (
+				00958F001B01A2F8007C59C0 /* Sources */,
+				00958F011B01A2F8007C59C0 /* Frameworks */,
+				00958F021B01A2F8007C59C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00958F061B01A2F8007C59C0 /* PBXTargetDependency */,
+			);
+			name = fCloudAppTests;
+			productName = fCloudAppTests;
+			productReference = 00958F041B01A2F8007C59C0 /* fCloudAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00958EE91B01A2F8007C59C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Good Coode";
+				TargetAttributes = {
+					00958EF01B01A2F8007C59C0 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					00958F031B01A2F8007C59C0 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 00958EF01B01A2F8007C59C0;
+					};
+				};
+			};
+			buildConfigurationList = 00958EEC1B01A2F8007C59C0 /* Build configuration list for PBXProject "fCloudApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00958EE81B01A2F8007C59C0;
+			productRefGroup = 00958EF21B01A2F8007C59C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00958EF01B01A2F8007C59C0 /* fCloudApp */,
+				00958F031B01A2F8007C59C0 /* fCloudAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00958EEF1B01A2F8007C59C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00958EFC1B01A2F8007C59C0 /* Images.xcassets in Resources */,
+				00958EFF1B01A2F8007C59C0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00958F021B01A2F8007C59C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00958EED1B01A2F8007C59C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00958EFA1B01A2F8007C59C0 /* fCloudApp.xcdatamodeld in Sources */,
+				00958EF71B01A2F8007C59C0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00958F001B01A2F8007C59C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00958F0B1B01A2F8007C59C0 /* fCloudAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00958F061B01A2F8007C59C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00958EF01B01A2F8007C59C0 /* fCloudApp */;
+			targetProxy = 00958F051B01A2F8007C59C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		00958EFD1B01A2F8007C59C0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00958EFE1B01A2F8007C59C0 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00958F0C1B01A2F8007C59C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00958F0D1B01A2F8007C59C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		00958F0F1B01A2F8007C59C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = fCloudApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00958F101B01A2F8007C59C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = fCloudApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00958F121B01A2F8007C59C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = fCloudAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fCloudApp.app/Contents/MacOS/fCloudApp";
+			};
+			name = Debug;
+		};
+		00958F131B01A2F8007C59C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = fCloudAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fCloudApp.app/Contents/MacOS/fCloudApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00958EEC1B01A2F8007C59C0 /* Build configuration list for PBXProject "fCloudApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00958F0C1B01A2F8007C59C0 /* Debug */,
+				00958F0D1B01A2F8007C59C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00958F0E1B01A2F8007C59C0 /* Build configuration list for PBXNativeTarget "fCloudApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00958F0F1B01A2F8007C59C0 /* Debug */,
+				00958F101B01A2F8007C59C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		00958F111B01A2F8007C59C0 /* Build configuration list for PBXNativeTarget "fCloudAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00958F121B01A2F8007C59C0 /* Debug */,
+				00958F131B01A2F8007C59C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		00958EF81B01A2F8007C59C0 /* fCloudApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				00958EF91B01A2F8007C59C0 /* fCloudApp.xcdatamodel */,
+			);
+			currentVersion = 00958EF91B01A2F8007C59C0 /* fCloudApp.xcdatamodel */;
+			path = fCloudApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 00958EE91B01A2F8007C59C0 /* Project object */;
+}
