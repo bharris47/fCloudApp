@@ -12,10 +12,16 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
+    var statusItem: NSStatusItem!
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        self.statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+        self.statusItem.view = DragStatusView(frame: NSRect(x: 0, y: 0, width: 20, height: 20))
+        if let item = self.statusItem.view as? DragStatusView {
+            item.image = NSImage(named: "fCloudApp")
+        }
+        self.statusItem.highlightMode = true
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
