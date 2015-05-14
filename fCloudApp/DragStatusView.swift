@@ -9,9 +9,9 @@
 import Foundation
 import Cocoa
 
-class DragStatusView : NSView {
+class DragStatusView : NSView, DragUploadCallback {
     var imageView: NSImageView!
-    let dragManager = DragManager()
+    var dragManager: DragUploadManager!
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -19,10 +19,13 @@ class DragStatusView : NSView {
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
+        
         self.imageView = NSImageView(frame: self.bounds)
         self.imageView.unregisterDraggedTypes()
+        self.imageView.image = NSImage(named: "fCloudApp")
         self.addSubview(self.imageView)
         
+        self.dragManager = DragUploadManager(callback: self)
         self.registerForDraggedTypes([NSFilenamesPboardType, NSTIFFPboardType])
     }
    
@@ -36,5 +39,13 @@ class DragStatusView : NSView {
     
     override func performDragOperation(sender: NSDraggingInfo) -> Bool {
         return self.dragManager.performDrop(sender)
+    }
+    
+    func dragUploadDidBegin() {
+        
+    }
+    
+    func dragUploadDidComplete() {
+        
     }
 }

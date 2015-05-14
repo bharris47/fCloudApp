@@ -14,7 +14,8 @@
 		00958F0B1B01A2F8007C59C0 /* fCloudAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00958F0A1B01A2F8007C59C0 /* fCloudAppTests.swift */; };
 		00CBD7C11B01C16100D1CCF1 /* DragStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CBD7C01B01C16100D1CCF1 /* DragStatusView.swift */; };
 		00FB82E21B03A81000C96259 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB82E11B03A81000C96259 /* Credentials.swift */; };
-		00FB82E41B0445F900C96259 /* DragManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB82E31B0445F900C96259 /* DragManager.swift */; };
+		00FB82E41B0445F900C96259 /* DragUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB82E31B0445F900C96259 /* DragUploadManager.swift */; };
+		7F7F56BD6C7B17A5C0ACDD50 /* Pods_fCloudApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7CB580EB39676DA29F9832A /* Pods_fCloudApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +38,13 @@
 		00958F041B01A2F8007C59C0 /* fCloudAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fCloudAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00958F091B01A2F8007C59C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00958F0A1B01A2F8007C59C0 /* fCloudAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fCloudAppTests.swift; sourceTree = "<group>"; };
+		0097D2DF1B04647A005FA8FC /* fCloudApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fCloudApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		00CBD7C01B01C16100D1CCF1 /* DragStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragStatusView.swift; sourceTree = "<group>"; };
 		00FB82E11B03A81000C96259 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		00FB82E31B0445F900C96259 /* DragManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragManager.swift; sourceTree = "<group>"; };
+		00FB82E31B0445F900C96259 /* DragUploadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragUploadManager.swift; sourceTree = "<group>"; };
+		0B9975D8B094DD2E9F4EFB26 /* Pods-fCloudApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fCloudApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fCloudApp/Pods-fCloudApp.debug.xcconfig"; sourceTree = "<group>"; };
+		41CEAAEC7870B3FEB1DF3A4F /* Pods-fCloudApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fCloudApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fCloudApp/Pods-fCloudApp.release.xcconfig"; sourceTree = "<group>"; };
+		C7CB580EB39676DA29F9832A /* Pods_fCloudApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fCloudApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F7F56BD6C7B17A5C0ACDD50 /* Pods_fCloudApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,8 @@
 				00958EF31B01A2F8007C59C0 /* fCloudApp */,
 				00958F071B01A2F8007C59C0 /* fCloudAppTests */,
 				00958EF21B01A2F8007C59C0 /* Products */,
+				3FDB02AC47998CA2950E130A /* Pods */,
+				0A9404698AC289BA44192114 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,7 +96,8 @@
 				00958EF41B01A2F8007C59C0 /* Supporting Files */,
 				00CBD7C01B01C16100D1CCF1 /* DragStatusView.swift */,
 				00FB82E11B03A81000C96259 /* Credentials.swift */,
-				00FB82E31B0445F900C96259 /* DragManager.swift */,
+				00FB82E31B0445F900C96259 /* DragUploadManager.swift */,
+				0097D2DF1B04647A005FA8FC /* fCloudApp-Bridging-Header.h */,
 			);
 			path = fCloudApp;
 			sourceTree = "<group>";
@@ -118,6 +127,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0A9404698AC289BA44192114 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7CB580EB39676DA29F9832A /* Pods_fCloudApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FDB02AC47998CA2950E130A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B9975D8B094DD2E9F4EFB26 /* Pods-fCloudApp.debug.xcconfig */,
+				41CEAAEC7870B3FEB1DF3A4F /* Pods-fCloudApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00958F0E1B01A2F8007C59C0 /* Build configuration list for PBXNativeTarget "fCloudApp" */;
 			buildPhases = (
+				1A323E00779BF47612C41AAD /* Check Pods Manifest.lock */,
 				00958EED1B01A2F8007C59C0 /* Sources */,
 				00958EEE1B01A2F8007C59C0 /* Frameworks */,
 				00958EEF1B01A2F8007C59C0 /* Resources */,
+				B57CA4CCA8DB0F48D4C68F73 /* Embed Pods Frameworks */,
+				18C6DFBA3BDD36C867DBF473 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +241,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18C6DFBA3BDD36C867DBF473 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fCloudApp/Pods-fCloudApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A323E00779BF47612C41AAD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B57CA4CCA8DB0F48D4C68F73 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fCloudApp/Pods-fCloudApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00958EED1B01A2F8007C59C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -220,7 +297,7 @@
 				00CBD7C11B01C16100D1CCF1 /* DragStatusView.swift in Sources */,
 				00958EFA1B01A2F8007C59C0 /* fCloudApp.xcdatamodeld in Sources */,
 				00FB82E21B03A81000C96259 /* Credentials.swift in Sources */,
-				00FB82E41B0445F900C96259 /* DragManager.swift in Sources */,
+				00FB82E41B0445F900C96259 /* DragUploadManager.swift in Sources */,
 				00958EF71B01A2F8007C59C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +351,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -293,7 +371,9 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "fCloudApp/fCloudApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -317,6 +397,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -329,11 +410,14 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "fCloudApp/fCloudApp-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
 		00958F0F1B01A2F8007C59C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B9975D8B094DD2E9F4EFB26 /* Pods-fCloudApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -345,6 +429,7 @@
 		};
 		00958F101B01A2F8007C59C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41CEAAEC7870B3FEB1DF3A4F /* Pods-fCloudApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -356,6 +441,7 @@
 		};
 		00958F121B01A2F8007C59C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B9975D8B094DD2E9F4EFB26 /* Pods-fCloudApp.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -376,6 +462,7 @@
 		};
 		00958F131B01A2F8007C59C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41CEAAEC7870B3FEB1DF3A4F /* Pods-fCloudApp.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;

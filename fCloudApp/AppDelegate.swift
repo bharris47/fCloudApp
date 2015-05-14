@@ -18,10 +18,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         self.statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
         self.statusItem.view = DragStatusView(frame: NSRect(x: 0, y: 0, width: 20, height: 20))
-        if let item = self.statusItem.view as? DragStatusView {
-            item.imageView.image = NSImage(named: "fCloudApp")
-        }
-        self.statusItem.highlightMode = true
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -33,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.getgoodcode.fCloudApp" in the user's Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
-        let appSupportURL = urls[urls.count - 1] as NSURL
+        let appSupportURL = urls[urls.count - 1] as! NSURL
         return appSupportURL.URLByAppendingPathComponent("com.getgoodcode.fCloudApp")
     }()
 
@@ -80,7 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if error != nil {
                 dict[NSUnderlyingErrorKey] = error
             }
-            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [NSObject : AnyObject])
             NSApplication.sharedApplication().presentError(error!)
             return nil
         } else {
