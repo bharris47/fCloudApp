@@ -9,16 +9,23 @@
 import Foundation
 import Cocoa
 
-class DragStatusView :NSImageView {
+class DragStatusView : NSView {
+    var imageView: NSImageView!
+    let dragManager = DragManager()
+    
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        fatalError("init(coder:) has not been implemented")
     }
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
-        self.registerForDraggedTypes([NSFilenamesPboardType])
+        self.imageView = NSImageView(frame: self.bounds)
+        self.imageView.unregisterDraggedTypes()
+        self.addSubview(self.imageView)
+        
+        self.registerForDraggedTypes([NSFilenamesPboardType, NSTIFFPboardType])
     }
-    
+   
     override func draggingEntered(sender: NSDraggingInfo) -> NSDragOperation {
         return NSDragOperation.Copy
     }
@@ -28,10 +35,6 @@ class DragStatusView :NSImageView {
     }
     
     override func performDragOperation(sender: NSDraggingInfo) -> Bool {
-        var pboard = sender.draggingPasteboard()
-        if contains(pboard.types! as [String], NSFilenamesPboardType) {
-            println(pboard.propertyListForType(NSFilenamesPboardType))
-        }
-        return false
+        return self.dragManager.performDrop(sender)
     }
 }
