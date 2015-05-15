@@ -57,7 +57,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             error = nil
             fileManager.createDirectoryAtPath(self.applicationDocumentsDirectory.path!, withIntermediateDirectories: true, attributes: nil, error: &error)
         }
-        
+
         // Create the coordinator and store
         var coordinator: NSPersistentStoreCoordinator?
         if !shouldFail && (error == nil) {
@@ -67,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 coordinator = nil
             }
         }
-        
+
         if shouldFail || (error != nil) {
             // Report any error we got.
             let dict = NSMutableDictionary()
@@ -76,7 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if error != nil {
                 dict[NSUnderlyingErrorKey] = error
             }
-            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [NSObject : AnyObject])
+            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [NSObject:AnyObject])
             NSApplication.sharedApplication().presentError(error!)
             return nil
         } else {
@@ -121,17 +121,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationShouldTerminate(sender: NSApplication) -> NSApplicationTerminateReply {
         // Save changes in the application's managed object context before the application terminates.
-        
+
         if let moc = managedObjectContext {
             if !moc.commitEditing() {
                 NSLog("\(NSStringFromClass(self.dynamicType)) unable to commit editing to terminate")
                 return .TerminateCancel
             }
-            
+
             if !moc.hasChanges {
                 return .TerminateNow
             }
-            
+
             var error: NSError? = nil
             if !moc.save(&error) {
                 // Customize this code block to include application-specific recovery steps.
@@ -139,7 +139,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if (result) {
                     return .TerminateCancel
                 }
-                
+
                 let question = NSLocalizedString("Could not save changes while quitting. Quit anyway?", comment: "Quit without saves error question message")
                 let info = NSLocalizedString("Quitting now will lose any changes you have made since the last successful save", comment: "Quit without saves error question info");
                 let quitButton = NSLocalizedString("Quit anyway", comment: "Quit anyway button title")
@@ -149,7 +149,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 alert.informativeText = info
                 alert.addButtonWithTitle(quitButton)
                 alert.addButtonWithTitle(cancelButton)
-                
+
                 let answer = alert.runModal()
                 if answer == NSAlertFirstButtonReturn {
                     return .TerminateCancel

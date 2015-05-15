@@ -34,3 +34,6 @@ Carthage/Build
 
 # Mac OS
 .DS_Store
+
+# Idea
+.idea
