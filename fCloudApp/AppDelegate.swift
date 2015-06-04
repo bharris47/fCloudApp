@@ -9,15 +9,28 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSMetadataQueryDelegate {
 
     @IBOutlet weak var window: NSWindow!
+    let uploadManager = UploadManager()
     var statusItem: NSStatusItem!
-
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         self.statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
-        self.statusItem.view = DragStatusView(frame: NSRect(x: 0, y: 0, width: 20, height: 20))
+        self.statusItem.highlightMode = true
+        
+        let statusView = DragStatusView(frame: NSRect(x: 0, y: 0, width: 20, height: 20), uploadManager: self.uploadManager)
+        statusView.statusItem = self.statusItem
+        self.statusItem.view = statusView
+        
+        let menu = NSMenu(title: "fCloudApp")
+        menu.addItemWithTitle("Quit", action: "quit", keyEquivalent: "q")
+        self.statusItem.menu = menu
+        
+    }
+
+    func quit() {
+        NSApplication.sharedApplication().terminate(self)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

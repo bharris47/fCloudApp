@@ -12,10 +12,11 @@
 		00958EFC1B01A2F8007C59C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00958EFB1B01A2F8007C59C0 /* Images.xcassets */; };
 		00958EFF1B01A2F8007C59C0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00958EFD1B01A2F8007C59C0 /* MainMenu.xib */; };
 		00958F0B1B01A2F8007C59C0 /* fCloudAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00958F0A1B01A2F8007C59C0 /* fCloudAppTests.swift */; };
-		00A48D971B05A92E00B10A72 /* DropHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A48D961B05A92E00B10A72 /* DropHandler.swift */; };
+		00A48D971B05A92E00B10A72 /* UploadHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A48D961B05A92E00B10A72 /* UploadHandler.swift */; };
 		00CBD7C11B01C16100D1CCF1 /* DragStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CBD7C01B01C16100D1CCF1 /* DragStatusView.swift */; };
+		00E5D6A91B1FFBCC00A1A0FA /* ScreenshotDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D6A81B1FFBCC00A1A0FA /* ScreenshotDetector.swift */; };
 		00FB82E21B03A81000C96259 /* Imgur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB82E11B03A81000C96259 /* Imgur.swift */; };
-		00FB82E41B0445F900C96259 /* DragUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB82E31B0445F900C96259 /* DragUploadManager.swift */; };
+		00FB82E41B0445F900C96259 /* UploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB82E31B0445F900C96259 /* UploadManager.swift */; };
 		7F7F56BD6C7B17A5C0ACDD50 /* Pods_fCloudApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7CB580EB39676DA29F9832A /* Pods_fCloudApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -40,10 +41,11 @@
 		00958F091B01A2F8007C59C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00958F0A1B01A2F8007C59C0 /* fCloudAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fCloudAppTests.swift; sourceTree = "<group>"; };
 		0097D2DF1B04647A005FA8FC /* fCloudApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fCloudApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		00A48D961B05A92E00B10A72 /* DropHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropHandler.swift; sourceTree = "<group>"; };
+		00A48D961B05A92E00B10A72 /* UploadHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadHandler.swift; sourceTree = "<group>"; };
 		00CBD7C01B01C16100D1CCF1 /* DragStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragStatusView.swift; sourceTree = "<group>"; };
+		00E5D6A81B1FFBCC00A1A0FA /* ScreenshotDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotDetector.swift; sourceTree = "<group>"; };
 		00FB82E11B03A81000C96259 /* Imgur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imgur.swift; sourceTree = "<group>"; };
-		00FB82E31B0445F900C96259 /* DragUploadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragUploadManager.swift; sourceTree = "<group>"; };
+		00FB82E31B0445F900C96259 /* UploadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadManager.swift; sourceTree = "<group>"; };
 		0B9975D8B094DD2E9F4EFB26 /* Pods-fCloudApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fCloudApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fCloudApp/Pods-fCloudApp.debug.xcconfig"; sourceTree = "<group>"; };
 		41CEAAEC7870B3FEB1DF3A4F /* Pods-fCloudApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fCloudApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fCloudApp/Pods-fCloudApp.release.xcconfig"; sourceTree = "<group>"; };
 		C7CB580EB39676DA29F9832A /* Pods_fCloudApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fCloudApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,9 +100,10 @@
 				00958EF41B01A2F8007C59C0 /* Supporting Files */,
 				00CBD7C01B01C16100D1CCF1 /* DragStatusView.swift */,
 				00FB82E11B03A81000C96259 /* Imgur.swift */,
-				00FB82E31B0445F900C96259 /* DragUploadManager.swift */,
 				0097D2DF1B04647A005FA8FC /* fCloudApp-Bridging-Header.h */,
-				00A48D961B05A92E00B10A72 /* DropHandler.swift */,
+				00FB82E31B0445F900C96259 /* UploadManager.swift */,
+				00A48D961B05A92E00B10A72 /* UploadHandler.swift */,
+				00E5D6A81B1FFBCC00A1A0FA /* ScreenshotDetector.swift */,
 			);
 			path = fCloudApp;
 			sourceTree = "<group>";
@@ -299,9 +302,10 @@
 			files = (
 				00CBD7C11B01C16100D1CCF1 /* DragStatusView.swift in Sources */,
 				00958EFA1B01A2F8007C59C0 /* fCloudApp.xcdatamodeld in Sources */,
+				00E5D6A91B1FFBCC00A1A0FA /* ScreenshotDetector.swift in Sources */,
 				00FB82E21B03A81000C96259 /* Imgur.swift in Sources */,
-				00A48D971B05A92E00B10A72 /* DropHandler.swift in Sources */,
-				00FB82E41B0445F900C96259 /* DragUploadManager.swift in Sources */,
+				00A48D971B05A92E00B10A72 /* UploadHandler.swift in Sources */,
+				00FB82E41B0445F900C96259 /* UploadManager.swift in Sources */,
 				00958EF71B01A2F8007C59C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

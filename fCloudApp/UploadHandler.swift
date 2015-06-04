@@ -11,13 +11,17 @@ import Cocoa
 import Alamofire
 import AFNetworking
 
-protocol DropHandler {
+protocol UploadHandler {
     func canHandlePasteboard(pasteboard: NSPasteboard) -> Bool
+    
+    func canHandleFiles(filenames: [String]) -> Bool
 
     func performUpload(pasteboard: NSPasteboard, onComplete: (url:NSURL) -> Void)
+    
+    func performUpload(filePaths: [String], onComplete: (url:NSURL) -> Void)
 }
 
-class FilenameDropHandler: DropHandler {
+class FilenameUploadHandler: UploadHandler {
     func canHandlePasteboard(pasteboard: NSPasteboard) -> Bool {
         if let types = pasteboard.types as? [String] {
             if contains(types, NSFilenamesPboardType) {
@@ -31,16 +35,24 @@ class FilenameDropHandler: DropHandler {
 
     func performUpload(pasteboard: NSPasteboard, onComplete: (url:NSURL) -> Void) {
         var filePath = self.value(pasteboard) as! String
+        self.performUpload([filePath], onComplete: onComplete)
+    }
+    
+    func performUpload(filePaths: [String], onComplete: (url:NSURL) -> Void) {
+        var filePath = filePaths[0]
         
         let request = Imgur.imageMultipartRequest({
             (data: AFMultipartFormData!) in
             data.appendPartWithFileURL(NSURL(fileURLWithPath: filePath), name: "image", error: nil)
         })
-
+        
         Alamofire.request(request).responseJSON(options: nil, completionHandler: {
             (_, _, response, _) -> Void in
-            if let link = ((response! as? NSDictionary)?["data"] as? [String:String])?["link"] {
-                onComplete(url: NSURL(string: link)!)
+            println(response)
+            if let json = response as? NSDictionary {
+                if let link = (json["data"] as! NSDictionary)["link"] as? String {
+                    onComplete(url: NSURL(string: link)!)
+                }
             }
         })
     }
@@ -54,14 +66,18 @@ class FilenameDropHandler: DropHandler {
     }
 }
 
-class FilenamesDropHandler: FilenameDropHandler {
+class FilenamesUploadHandler: FilenameUploadHandler {
     typealias DropType = [String]
 
     override func performUpload(pasteboard: NSPasteboard, onComplete: (url:NSURL) -> Void) {
         var filePaths = self.value(pasteboard) as! [String]
-        
+        self.performUpload(filePaths, onComplete: onComplete)
+    }
+    
+    override func performUpload(filePaths: [String], onComplete: (url:NSURL) -> Void) {
         // Create album
         Alamofire.request(Imgur.albumRequest()).responseJSON(options: nil) { (_, _, response, _) -> Void in
+            println(response)
             if let data = ((response as! NSDictionary)["data"] as? [String: String]) {
                 let albumId = data["id"]!
                 let deleteHash = data["deletehash"]!
@@ -70,12 +86,13 @@ class FilenamesDropHandler: FilenameDropHandler {
                 var imageCount = count(filePaths)
                 for path in filePaths {
                     let request = Imgur.imageMultipartRequest(["album": deleteHash], bodyBuilder: {
-                            (data: AFMultipartFormData!) in
-                            data.appendPartWithFileURL(NSURL(fileURLWithPath: path), name: "image", error: nil)
+                        (data: AFMultipartFormData!) in
+                        data.appendPartWithFileURL(NSURL(fileURLWithPath: path), name: "image", error: nil)
                         }
                     )
                     
                     Alamofire.request(request).responseJSON(options: nil, completionHandler: { (_, _, response, _) -> Void in
+                        println(response)
                         imageCount -= 1
                         if imageCount == 0 {
                             onComplete(url: NSURL(string: Imgur.urlForAlbum(albumId))!)

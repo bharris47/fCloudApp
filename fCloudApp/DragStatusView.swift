@@ -12,13 +12,14 @@ import Cocoa
 class DragStatusView: NSView {
     let dragTypes = [NSFilenamesPboardType, NSTIFFPboardType]
     var imageView: NSImageView!
-    var dragManager: DragUploadManager!
+    var uploadManager: UploadManager!
+    var statusItem: NSStatusItem?
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override init(frame frameRect: NSRect) {
+    init(frame frameRect: NSRect, uploadManager: UploadManager) {
         super.init(frame: frameRect)
 
         self.imageView = NSImageView(frame: self.bounds)
@@ -27,7 +28,10 @@ class DragStatusView: NSView {
         self.imageView.image = NSImage(named: "fCloudApp_dark")
         self.addSubview(self.imageView)
 
-        self.dragManager = DragUploadManager()
+        self.uploadManager = uploadManager
+        self.uploadManager.onUploadBegin = self.beginAnimating
+        self.uploadManager.onUploadComplete = self.uploadDidComplete
+        
         self.registerForDraggedTypes(self.dragTypes)
     }
 
@@ -40,13 +44,16 @@ class DragStatusView: NSView {
     }
 
     override func performDragOperation(sender: NSDraggingInfo) -> Bool {
-        if self.dragManager.performDrop(sender, onComplete: uploadDidComplete) {
+        if self.uploadManager.performDrop(sender) {
             self.imageView.unregisterDraggedTypes()
-            beginAnimating()
             return true
         }
         
         return false
+    }
+    
+    override func mouseDown(theEvent: NSEvent) {
+        self.statusItem!.popUpStatusItemMenu(self.statusItem!.menu!)
     }
     
     func beginAnimating() {
